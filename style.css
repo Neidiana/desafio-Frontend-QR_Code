@@ -1,0 +1,154 @@
+@font-face {
+    font-family: outfit;
+    src: url(./fonts/Outfit-VariableFont_wght.ttf);
+}
+
+:root {
+    --color-light-grey: #D5E1EF;
+    --color-white: #FFFFFF;
+    --color-dark-navy: #1F314F;
+    --color-grey: #7D889E;
+}
+
+/* -----Reiniciar CSS----- */
+
+/* Regras de dimensionamento da caixa */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Evite a inflação do tamanho da fonte */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove margem padrão em favor de melhor controle em CSS de autoria */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+/* Remove estilos de lista em elementos ul,
+ol com uma função de lista,
+o que sugere que o estilo padrão será removido */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Defini padrões do corpo principal */
+body {
+    min-height: 100vh;
+    line-height: 1.3;
+}
+
+/* Defini a altura de linha mais curta em títulos e elementos interativos */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Equilibra a quebra automática de texto nos títulos */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/*  Obtendo elementos que não possuem classe estilos padrão */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Tornando as imagens mais fáceis de trabalhar */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Herdar fontes para entradas e botões */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Certificando-se de que as áreas de texto sem um atributo rows não sejam pequenas */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Qualquer coisa que tenha sido ancorada deve ter margem de rolagem extra */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* -----Reiniciar CSS----- */
+
+body {
+    font-family: outfit;
+    background-color: var(--color-light-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-card {
+    max-width: 20rem;
+    background-color: var(--color-white);
+    padding: 16px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 24px 24px rgb(0, 0, 0, 0.05);
+}
+
+img {
+    border-radius: 12px;
+}
+
+h1 {
+    color: var(--color-dark-navy);
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.025rem;
+    line-height: 1.35;
+    padding: 14px 0 0 0;
+}
+
+p {
+    color: var(--color-grey);
+    font-size: 0.9375rem;
+    font-weight: 400;
+    padding: 0 16px 28px 16px;
+}
+
+.attribution {
+    font-size: 0.75rem;
+    margin-top: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
